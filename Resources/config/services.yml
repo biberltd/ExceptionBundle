@@ -1,0 +1,8 @@
+parameters:
+    biber_ltd_bundles_exception.email.from: support@biberltd.com
+    biber_ltd_bundles_exception.email.to: support@biberltd.com
+
+#services:
+#    biber_ltd_bundles_exception.exception_adapter:
+#        class: BiberLtd\Bundles\ExceptionBundle\Services\ExceptionAdapter
+#        arguments: []
