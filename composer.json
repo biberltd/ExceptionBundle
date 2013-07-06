@@ -1,5 +1,5 @@
 {
-    "name": "biberltd/biberltd/bundles/exception-bundle",
+    "name": "biberltd/exception-bundle",
     "type": "symfony-bundle",
     "description": "Handles PHP related exceptions. It can throw exceptions to screen or email them. The exception handling behavior can be easily customizable",
     "keywords": ["php exceptions", "exception handle", "error handler"],
@@ -15,9 +15,9 @@
         "php": ">=5.3.2"
     },
     "autoload": {
-        "psr-0": { "BiberLtd\\Bundles\\ExceptionBundle": "" }
+        "psr-0": { "BiberLtd\\Bundles\\ExceptionBundle": "ExceptionBundle/" }
 
     },
     "minimum-stability": "dev",
-    "target-dir": "BiberLtd/Bundles/CurrencyBundle/"
+    "target-dir": "ExceptionBundle/"
 }
