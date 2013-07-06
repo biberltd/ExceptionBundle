@@ -38,12 +38,24 @@ class ProdBehavior implements BehaviorInterface\BehaviorInterface{
          */
         if(!is_null($service->getException()->getPrevious()) && $service->getException()->getPrevious()->getCode() != $service->getException()->getCode()){
             $trace = $service->getException()->getTraceAsString();
-            $exception_content = 'ERROR #'.$service->getException()->getCode().PHP_EOL
+            $exception_content =
+                 '=========================================================='.PHP_EOL
+                .'ERROR #'.$service->getException()->getCode().PHP_EOL
+                .'=========================================================='.PHP_EOL
                 .'LINE :: '.$service->getException()->getLine().PHP_EOL
                 .'FILE :: '.$service->getException()->getFile().PHP_EOL.PHP_EOL
                 .'MESSAGE :: '.PHP_EOL.$service->getException()->getMessage().PHP_EOL.PHP_EOL
-                .'TRACE:'.PHP_EOL
-                .$trace;
+                .'=========================================================='.PHP_EOL
+                .'TRACE:'.PHP_EOL.PHP_EOL
+                .$trace.PHP_EOL.PHP_EOL
+                .'=========================================================='.PHP_EOL
+                .'CLIENT / BROWSER INFO'.PHP_EOL
+                .'=========================================================='.PHP_EOL
+                .'URL :: '.$_SERVER['SCRIPT_URI'].PHP_EOL
+                .'CLIENT IP :: '.$_SERVER['REMOTE_ADDR'].PHP_EOL
+                .'COOKIE :: '.$_SERVER['HTTP_COOKIE'].PHP_EOL
+                .'AGENT :: '.PHP_EOL.$_SERVER['HTTP_USER_AGENT'].PHP_EOL.PHP_EOL;
+
             $subject = 'Exception :: '.$service->getException()->getCode().' :: '.$service->getDate()->format('Y-m-d h:i:s');
             $headers = 'From: '.$service->getEmailFrom()."\r\n".
                 'Reply-To: '.$service->getEmailTo()."\r\n".

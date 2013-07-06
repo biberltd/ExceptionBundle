@@ -1,0 +1,24 @@
+{
+    "name": "BiberLtd/ExceptionBundle",
+    "type": "symfony-bundle",
+    "description": "Handles PHP related exceptions. It can throw exceptions to screen or email them. The exception handling behavior can be easily customizable",
+    "keywords": ["php exceptions", "exception handle", "error handler"],
+    "homepage": "http://github.com/biberltd/ExceptionBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Can Berkol",
+            "email": "can.berkol@biberltd.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "biberltd/exceptionbundle": "master"
+    },
+    "autoload": {
+        "psr-0": { "BiberLtd\\Bundles\\ExceptionBundle": "" }
+
+    },
+    "minimum-stability": "dev",
+    "target-dir": "BiberLtd/Bundles/CurrencyBundle/"
+}
