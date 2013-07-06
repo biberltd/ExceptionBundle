@@ -1,5 +1,5 @@
 {
-    "name": "biberltd/exception-bundle",
+    "name": "biberltd/biberltd/bundles/exception-bundle",
     "type": "symfony-bundle",
     "description": "Handles PHP related exceptions. It can throw exceptions to screen or email them. The exception handling behavior can be easily customizable",
     "keywords": ["php exceptions", "exception handle", "error handler"],
