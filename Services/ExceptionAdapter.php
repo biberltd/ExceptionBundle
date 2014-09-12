@@ -70,10 +70,10 @@ class ExceptionAdapter extends \Exception {
      *
      */
     private function register_behaviors(){
-        $files = glob(__DIR__.'\\..\\Behaviors\\*Behavior.php');
+        $files = glob(__DIR__.'/../Behaviors/*Behavior.php');
         foreach($files as $file){
             $behavior_class = str_replace('.php', '', $file);
-            $behavior_name = $behavior_class = str_replace(__DIR__.'\\..\\Behaviors\\', '', $behavior_class);
+            $behavior_name = $behavior_class = str_replace(__DIR__.'/../Behaviors/', '', $behavior_class);
             $behavior_class = '\\BiberLtd\\Bundle\\ExceptionBundle\\Behaviors\\'.$behavior_name;
             $behavior = new $behavior_class();
 
@@ -81,6 +81,7 @@ class ExceptionAdapter extends \Exception {
         }
 
         return $this;
+
     }
     /**
      * @name 			getBehaviors()
