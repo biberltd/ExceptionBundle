@@ -1,6 +1,6 @@
 <?php
 
-namespace BiberLtd\Bundles\ExceptionBundle\Controller;
+namespace BiberLtd\Bundle\ExceptionBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

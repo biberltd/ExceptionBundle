@@ -13,7 +13,7 @@
  * @description Main exception adapter.
  *
  */
-namespace BiberLtd\Bundles\ExceptionBundle\Services;
+namespace BiberLtd\Bundle\ExceptionBundle\Services;
 
 class ExceptionAdapter extends \Exception {
     protected $date;
@@ -27,11 +27,11 @@ class ExceptionAdapter extends \Exception {
     public function __construct($kernel, $message = '', $code = 0, Exception $previous = null) {
         /** Register adapters */
         $this->register_behaviors();
-        if($kernel->getContainer()->hasParameter('biber_ltd_bundles_exception.email.from')){
-            $this->email_from = $kernel->getContainer()->getParameter('biber_ltd_bundles_exception.email.from');
+        if($kernel->getContainer()->hasParameter('biber_ltd_exception.email.from')){
+            $this->email_from = $kernel->getContainer()->getParameter('biber_ltd_exception.email.from');
         }
-        if($kernel->getContainer()->hasParameter('biber_ltd_bundles_exception.email.to')){
-            $this->email_to = $kernel->getContainer()->getParameter('biber_ltd_bundles_exception.email.to');
+        if($kernel->getContainer()->hasParameter('biber_ltd_exception.email.to')){
+            $this->email_to = $kernel->getContainer()->getParameter('biber_ltd_exception.email.to');
         }
         /** Get environment*/
         $this->env = $kernel->getEnvironment();
@@ -74,7 +74,7 @@ class ExceptionAdapter extends \Exception {
         foreach($files as $file){
             $behavior_class = str_replace('.php', '', $file);
             $behavior_name = $behavior_class = str_replace(__DIR__.'\\..\\Behaviors\\', '', $behavior_class);
-            $behavior_class = '\\BiberLtd\\Bundles\\ExceptionBundle\\Behaviors\\'.$behavior_name;
+            $behavior_class = '\\BiberLtd\\Bundle\\ExceptionBundle\\Behaviors\\'.$behavior_name;
             $behavior = new $behavior_class();
 
             $this->behaviors[strtolower($behavior_name)] = $behavior;

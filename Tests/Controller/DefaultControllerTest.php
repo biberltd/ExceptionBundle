@@ -1,6 +1,6 @@
 <?php
 
-namespace BiberLtd\Bundles\ExceptionBundle\Tests\Controller;
+namespace BiberLtd\Bundle\ExceptionBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

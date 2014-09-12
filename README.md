@@ -39,15 +39,15 @@ Manual Installation:
 		
 	Finally, open app/AppKernel.php and register the bundle by adding the following line into $bundles array:
 	
-		new BiberLtd\Bundles\ExceptionBundle\BiberLtdBundlesExceptionBundle(),
+		new BiberLtd\Bundle\ExceptionBundle\BiberLtdBundlesExceptionBundle(),
 		
 Configuring the Email Functionality:
 	Open the ExceptionBundle/Resources/config/services.yml file.
 	
 	Here you will see two parameters. One for the from address and the other for the to address.
 	
-		- biber_ltd_bundles_exception.email.from: support@biberltd.com
-    - biber_ltd_bundles_exception.email.to: support@biberltd.com
+		- biber_ltd_exception.email.from: support@biberltd.com
+    - biber_ltd_exception.email.to: support@biberltd.com
   
   Change them as you want and you are good to go.
 
@@ -60,7 +60,7 @@ exceptions. For example in your bundle MyBundle create Exceptions folder: MyBund
 	1. Now create a sample exception called SampleException. The file name must have the same name as your class, so it will be SampleException.php
 	
 	2. You need to define the files namespace first and second you need to include this statement:
-		use BiberLtd\Bundles\ExceptionBundle\Services;
+		use BiberLtd\Bundle\ExceptionBundle\Services;
 		
 	3. All you need to do is to create your class as following:
 		class SampleException extends Services\ExceptionAdapter { }
@@ -107,9 +107,9 @@ For example, if you have an environment set as "staging", you can create a behav
 
 Your behavior must
 	- be placed within the 
-		namespace BiberLtd\Bundles\ExceptionBundle\Behaviors; 
-	- use BiberLtd\Bundles\ExceptionBundle\Behaviors\BehaviorInterface;
-	- use BiberLtd\Bundles\ExceptionBundle\Services\ExceptionAdapter; 
+		namespace BiberLtd\Bundle\ExceptionBundle\Behaviors;
+	- use BiberLtd\Bundle\ExceptionBundle\Behaviors\BehaviorInterface;
+	- use BiberLtd\Bundle\ExceptionBundle\Services\ExceptionAdapter;
 	- implement BehaviorInterface\BehaviorInterface
 	- have a public function called notify with the ExceptionAdapter $service parameter.
 	

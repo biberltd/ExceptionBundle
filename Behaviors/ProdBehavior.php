@@ -13,11 +13,11 @@
  * @description Exception behavior for production environment.
  *
  */
-namespace BiberLtd\Bundles\ExceptionBundle\Behaviors;
+namespace BiberLtd\Bundle\ExceptionBundle\Behaviors;
 
 
-use BiberLtd\Bundles\ExceptionBundle\Behaviors\BehaviorInterface;
-use BiberLtd\Bundles\ExceptionBundle\Services\ExceptionAdapter;
+use BiberLtd\Bundle\ExceptionBundle\Behaviors\BehaviorInterface;
+use BiberLtd\Bundle\ExceptionBundle\Services\ExceptionAdapter;
 
 class ProdBehavior implements BehaviorInterface\BehaviorInterface{
     /**

@@ -13,9 +13,9 @@
  * @description The inteface of exception behavior handler.
  *
  */
-namespace BiberLtd\Bundles\ExceptionBundle\Behaviors\BehaviorInterface;
+namespace BiberLtd\Bundle\ExceptionBundle\Behaviors\BehaviorInterface;
 
-use BiberLtd\Bundles\ExceptionBundle\Services\ExceptionAdapter;
+use BiberLtd\Bundle\ExceptionBundle\Services\ExceptionAdapter;
 
 interface BehaviorInterface {
    public function notify(ExceptionAdapter $service);

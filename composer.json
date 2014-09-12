@@ -9,15 +9,19 @@
         {
             "name": "Can Berkol",
             "email": "can.berkol@biberltd.com"
+        },
+        {
+            "name": "Said İmamoğlu",
+            "email": "said.imamoglu@biberltd.com"
         }
     ],
     "require": {
         "php": ">=5.3.2"
     },
     "autoload": {
-        "psr-0": { "BiberLtd\\Bundles\\ExceptionBundle": "" }
+        "psr-0": { "BiberLtd\\Bundle\\ExceptionBundle": "" }
 
     },
     "minimum-stability": "dev",
-    "target-dir": "BiberLtd/Bundles/ExceptionBundle/"
+    "target-dir": "BiberLtd/Bundle/ExceptionBundle/"
 }
